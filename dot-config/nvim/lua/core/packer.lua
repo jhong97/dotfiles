@@ -15,6 +15,13 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- Requires a NerdFont
+    },
+  }
+
   use({ 'sainnhe/gruvbox-material',
   	as = 'gruvbox-material',
 	config = function()
@@ -38,5 +45,8 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+
+  use('AndrewRadev/splitjoin.vim')
+  use('tpope/vim-surround')
 
 end)
