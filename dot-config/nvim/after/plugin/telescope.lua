@@ -8,7 +8,7 @@ end)
 vim.keymap.set('n', '<leader>fo', telescope.oldfiles, {})
 
 function LIVE_GREP_FROM_PROJECT_ROOT()
-  local git_root = vim.fn.system('give rev-parse --show-toplevel')
+  local git_root = vim.fn.system('git rev-parse --show-toplevel')
   if vim.v.shell_error == 0 then
     git_root = string.gsub(git_root, '\n$', '')
     telescope.live_grep({ cwd = git_root })
