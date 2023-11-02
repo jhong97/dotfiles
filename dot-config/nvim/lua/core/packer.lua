@@ -9,10 +9,17 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'},
       {'BurntSushi/ripgrep'},
       {'sharkdp/fd'},
-      {'nvim-treesitter/nvim-treesitter'},
       {'nvim-tree/nvim-web-devicons'},
       {'nvim-telescope/telescope-fzf-native.nvim'},
     }
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
   }
 
   use {
@@ -22,12 +29,8 @@ return require('packer').startup(function(use)
     },
   }
 
-  use({ 'sainnhe/gruvbox-material',
-  	as = 'gruvbox-material',
-	config = function()
-		vim.cmd('colorscheme gruvbox-material')
-	end
-  })
+
+  use { 'catppuccin/nvim', as = "catppuccin" }
 
   use {
     'neovim/nvim-lspconfig',
