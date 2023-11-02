@@ -1,9 +1,3 @@
-require('mason').setup()
-require('mason-lspconfig').setup()
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspconfig = require('lspconfig')
-
 local servers = {
   'lua_ls',
   'solargraph',
@@ -12,6 +6,14 @@ local servers = {
   'golangci_lint_ls',
   'bashls',
 }
+
+require('mason').setup()
+require('mason-lspconfig').setup{
+  ensure_installed = servers
+}
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig = require('lspconfig')
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
