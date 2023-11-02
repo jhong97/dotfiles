@@ -15,6 +15,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 
 -- Enable nvim tree shortcut
 vim.keymap.set("n", "<leader>f<leader>", vim.cmd.NvimTreeToggle)
+vim.api.nvim_set_keymap('n', '<leader>cd', [[:cd %:h <CR>]], { noremap = true })
 
 -- Active File Directory expansion
 vim.cmd[[cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%']]
