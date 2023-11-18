@@ -28,8 +28,3 @@ function LIVE_GREP_FROM_PROJECT_ROOT()
 end
 
 vim.api.nvim_set_keymap('n', '<leader>fs', [[:lua LIVE_GREP_FROM_PROJECT_ROOT()<CR>]], { noremap = true})
-
-
-
-
-
