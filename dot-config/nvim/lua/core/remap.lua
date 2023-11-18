@@ -1,9 +1,18 @@
 vim.g.mapleader = " "
+local opts = {noremap = true, silent = true}
+
+-- freeing up the <C-a> by reassigning increment and decrement
+vim.keymap.set("n", "+", "<C-a>")
+vim.keymap.set("n", "-", "<C-x>")
+
+-- selecting everything in file
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- for netrw
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- for everything window
+-- ie <leader>wv for vertical, <leader>ws for split
 vim.keymap.set("n", "<leader>w", "<C-w>")
 
 -- for redoing
@@ -19,3 +28,4 @@ vim.api.nvim_set_keymap('n', '<leader>cd', [[:cd %:h <CR>]], { noremap = true })
 
 -- Active File Directory expansion
 vim.cmd[[cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%']]
+
