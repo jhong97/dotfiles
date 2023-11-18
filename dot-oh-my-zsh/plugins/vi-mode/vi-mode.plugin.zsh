@@ -12,7 +12,7 @@ typeset -g VI_MODE_RESET_PROMPT_ON_MODE_CHANGE
 #
 # Set to "true" to change the cursor on each mode change.
 # Unset or set to any other value to do the opposite.
-typeset -g VI_MODE_SET_CURSOR
+typeset -g VI_MODE_SET_CURSOR=true
 
 # Control how the cursor appears in the various vim modes. This only applies
 # if $VI_MODE_SET_CURSOR=true.
