@@ -5,6 +5,7 @@ local servers = {
   'tsserver',
   'golangci_lint_ls',
   'bashls',
+  'rust_analyzer'
 }
 
 require('mason').setup()
