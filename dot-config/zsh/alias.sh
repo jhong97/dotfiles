@@ -29,3 +29,6 @@ alias grts="git restore --staged"
 alias grm="git remove"
 alias grmc="git remove --cached"
 alias gs="git status"
+
+# python
+alias python=python3
