@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Uncomment for personal
 # eval "$(rbenv init - zsh)"
 
 # export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -111,3 +112,5 @@ for f in ~/.config/zsh/*; do source $f; done
 
 bindkey -v
 bindkey -v '^?' backward-delete-char
+
+source <(fzf --zsh)
