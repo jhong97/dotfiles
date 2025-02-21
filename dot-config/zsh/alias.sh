@@ -5,7 +5,7 @@ alias v="nvim"
 alias g="git"
 alias ga="git add"
 alias gaa="git add --all"
-alias gb="git branch" 
+alias gb="git branch"
 alias gbd="git branch --delete"
 alias gbD="git branch --delete --force"
 alias gcp="git cherry-pick"
@@ -32,3 +32,6 @@ alias gs="git status"
 
 # python
 alias python=python3
+
+# Minikube
+alias kubectl="minikube kubectl --"
